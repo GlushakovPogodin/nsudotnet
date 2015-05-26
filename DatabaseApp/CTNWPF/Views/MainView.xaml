@@ -15,7 +15,7 @@
             <TabItem Header="Типы АТС">
                 <lists:ATSTypeListView DataContext="{Binding ATSTypeList}"/>
             </TabItem>
-            <TabItem Header="Тип операции">
+            <TabItem Header="Типы операций">
                 <lists:BalanceChangeTypeListView DataContext="{Binding BalanceChangeTypeList}"/>
             </TabItem>
             <TabItem Header="Баланс">
@@ -30,7 +30,7 @@
             <TabItem Header="Статусы межгорода">
                 <lists:IntercityStatusListView DataContext="{Binding IntercityStatusList}"/>
             </TabItem>
-            <TabItem Header="Типы телефона">
+            <TabItem Header="Типы телефонов">
                 <lists:PhoneTypeListView DataContext="{Binding PhoneTypeList}"/>
             </TabItem>
             <TabItem Header="Телефоны">

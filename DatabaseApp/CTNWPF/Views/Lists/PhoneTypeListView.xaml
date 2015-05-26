@@ -16,7 +16,7 @@
             <ListView HorizontalAlignment="Stretch" SelectedItem="{Binding SelectedPhoneType, Mode=TwoWay}" ItemsSource="{Binding PhoneTypeList}">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Тип АТС" Width="Auto" DisplayMemberBinding="{Binding Type}"></GridViewColumn>
+                        <GridViewColumn Header="Тип телефона" Width="Auto" DisplayMemberBinding="{Binding Type}"></GridViewColumn>
                     </GridView>
                 </ListView.View>
             </ListView>
@@ -29,7 +29,7 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Column="0" Grid.Row="0" Text="Тип АТС:"></TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="0" Text="Тип телефона:"></TextBlock>
             <TextBox Grid.Column="0" Grid.Row="1" Text="{Binding Path=SelectedPhoneType.Type}"></TextBox>
 
         </Grid>

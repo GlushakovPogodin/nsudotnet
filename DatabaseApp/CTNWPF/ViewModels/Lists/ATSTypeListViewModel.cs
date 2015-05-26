@@ -55,7 +55,7 @@ namespace CTNWPF.ViewModels.Lists
             try
             {
                 Mapper.CreateMap<ATSType, ATSType>();
-                _atsTypeService.Create(Mapper.Map<ATSType, ATSType>(_selectedATSType.AtsTypeEntity));
+                _atsTypeService.Create(Mapper.Map<ATSType, ATSType>(_selectedATSType.ATSTypeEntity));
                 RefreshList();
 
             }
@@ -67,11 +67,11 @@ namespace CTNWPF.ViewModels.Lists
 
         public void Update()
         {
-            if (_selectedATSType.AtsTypeEntity.Id == 0)
+            if (_selectedATSType.ATSTypeEntity.Id == 0)
                 return;
             try
             {
-                _atsTypeService.Update(_selectedATSType.AtsTypeEntity);
+                _atsTypeService.Update(_selectedATSType.ATSTypeEntity);
                 RefreshList();
                 ItemInit();
                 NotifyOfPropertyChange(() => SelectedATSType);
@@ -84,11 +84,11 @@ namespace CTNWPF.ViewModels.Lists
 
         public void Delete()
         {
-            if (_selectedATSType.AtsTypeEntity.Id == 0)
+            if (_selectedATSType.ATSTypeEntity.Id == 0)
                 return;
             try
             {
-                _atsTypeService.Delete(_selectedATSType.AtsTypeEntity);
+                _atsTypeService.Delete(_selectedATSType.ATSTypeEntity);
                 RefreshList();
                 ItemInit();
                 NotifyOfPropertyChange(() => SelectedATSType);

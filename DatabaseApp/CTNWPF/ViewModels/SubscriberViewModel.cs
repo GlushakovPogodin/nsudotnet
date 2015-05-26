@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Caliburn.Micro;
 using CTNDb;
 
@@ -54,6 +50,10 @@ namespace CTNWPF.ViewModels
             }
         }
 
+        public string SexStr
+        {
+            get { return Sex == true ? "m" : "f"; }
+        }
         public bool Sex
         {
             get { return SubscriberEntity.Sex; }

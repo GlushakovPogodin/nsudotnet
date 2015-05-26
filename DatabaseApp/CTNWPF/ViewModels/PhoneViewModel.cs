@@ -121,7 +121,7 @@ namespace CTNWPF.ViewModels
             get { return PhoneEntity.Subscriber == null ? null : PhoneEntity.Subscriber.Name; }
         }
 
-        public string SubscriberSurame
+        public string SubscriberSurname
         {
             get { return PhoneEntity.Subscriber == null ? null : PhoneEntity.Subscriber.Surname; }
         }
@@ -142,7 +142,7 @@ namespace CTNWPF.ViewModels
                 PhoneEntity.SubscriberId = _subscriber.SubscriberEntity.Id;
                 NotifyOfPropertyChange(() => Subscriber);
                 NotifyOfPropertyChange(() => SubscriberName);
-                NotifyOfPropertyChange(() => SubscriberSurame);
+                NotifyOfPropertyChange(() => SubscriberSurname);
                 NotifyOfPropertyChange(() => SubscriberPatronymic);
             }
         }

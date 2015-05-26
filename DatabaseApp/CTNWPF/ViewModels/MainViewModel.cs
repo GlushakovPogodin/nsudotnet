@@ -24,45 +24,20 @@ namespace CTNWPF.ViewModels
             )
         {
             AddressList = new AddressListViewModel(addressService);
-            ATSList = new ATSListViewModel(atsService);
+            ATSList = new ATSListViewModel(atsService, atsTypeService, ctnService);
             ATSTypeList = new ATSTypeListViewModel(atsTypeService);
             BalanceChangeTypeList = new BalanceChangeTypeListViewModel(balanceChangeTypeService);
-            BalanceList = new BalanceListViewModel(balanceService);
+            BalanceList = new BalanceListViewModel(balanceService, balanceChangeTypeService, phoneService);
             CTNList = new CTNListViewModel(ctnService);
-            IntercityConversationList = new IntercityConversationListViewModel(intercityConversationService);
+            IntercityConversationList = new IntercityConversationListViewModel(intercityConversationService, ctnService, phoneService);
             IntercityStatusList = new IntercityStatusListViewModel(intercityStatusService);
-            PhoneList = new PhoneListViewModel(phoneService);
+            PhoneList = new PhoneListViewModel(phoneService, phoneTypeService, atsService, addressService, subscriberService, intercityStatusService);
             PhoneTypeList = new PhoneTypeListViewModel(phoneTypeService);
-            QueueList = new QueueListViewModel(queueService);
+            QueueList = new QueueListViewModel(queueService, addressService, queueTypeService);
             QueueTypeList = new QueueTypeListViewModel(queueTypeService);
-            SubscriberList = new SubscriberListViewModel(subscriberService);
+            SubscriberList = new SubscriberListViewModel(subscriberService, subscriberTypeService);
             SubscriberTypeList = new SubscriberTypeListViewModel(subscriberTypeService);
-
-            /*_atsTypeService = atsTypeService;
-            _atsTypeList = new ObservableCollection<ATSTypeViewModel>();
-            foreach (var atsType in new List<ATSType>(_atsTypeService.GetAll()))
-            {
-                var vm = new ATSTypeViewModel();
-                vm.SetATSType(atsType);
-                _atsTypeList.Add(vm);
-            }*/
-            /*_atsService = atsService;
-            _atsList = new ObservableCollection<ATSViewModel>();
-            _atsTypeList = new ObservableCollection<ATSTypeViewModel>();
-            foreach (var ats in new List<ATS>(_atsService.GetAll()))
-            {
-                var vm = new ATSViewModel();
-                vm.SetATS(ats);
-                _atsList.Add(vm);   
- 
-            }*/
-            //Address = new AddressViewModel();
         }
-
-        /*public ObservableCollection<AddressViewModel> AddressList
-        {
-            get { return _addressList; }
-        }*/
         
         public AddressListViewModel AddressList { get; set; }
         public ATSTypeListViewModel ATSTypeList { get; set; }

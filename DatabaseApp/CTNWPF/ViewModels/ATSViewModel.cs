@@ -69,8 +69,8 @@ namespace CTNWPF.ViewModels
                     return;
 
                 _ATSType = value;
-                ATSEntity.ATSType = _ATSType.AtsTypeEntity;
-                ATSEntity.ATSTypeId = _ATSType.AtsTypeEntity.Id;
+                ATSEntity.ATSType = _ATSType.ATSTypeEntity;
+                ATSEntity.ATSTypeId = _ATSType.ATSTypeEntity.Id;
                 NotifyOfPropertyChange(() => ATSType);
                 NotifyOfPropertyChange(() => Type);
             }
