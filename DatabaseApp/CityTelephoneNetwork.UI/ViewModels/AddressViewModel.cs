@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Linq;
 using System.Text.RegularExpressions;
 using Caliburn.Micro;
 using CityTelephoneNetwork.Data;
@@ -9,6 +10,7 @@ namespace CityTelephoneNetwork.UI.ViewModels
     public class AddressViewModel : PropertyChangedBase, IDataErrorInfo
     {
         public Address AddressEntity { get; private set; }
+        private static readonly string[] ColumnNames = {"Index", "District", "Street", "House", "Flat"};
 
         public void SetAddress(Address address)
         {
@@ -87,7 +89,6 @@ namespace CityTelephoneNetwork.UI.ViewModels
         {
             get
             {
-                Error = null;
                 string msg = null;
                 switch (columnName)
                 {
@@ -137,11 +138,14 @@ namespace CityTelephoneNetwork.UI.ViewModels
                             msg = "Flat can't contain special symbols";
                         break;
                 }
-                Error = msg;
                 return msg;
             }
         }
 
-        public string Error { get; private set; }
+        public string Error
+        {
+            get
+            { return ColumnNames.Select(column => this[column]).FirstOrDefault(error => error != null); }
+        }
     }
 }
