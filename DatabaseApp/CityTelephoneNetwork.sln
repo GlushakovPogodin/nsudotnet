@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTNDb", "CTNDb\CTNDb.csproj", "{82803683-395F-4D58-85F3-C70661716355}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityTelephoneNetwork.Data", "CityTelephoneNetwork.Data\CityTelephoneNetwork.Data.csproj", "{82803683-395F-4D58-85F3-C70661716355}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTNDAL", "CTNDAL\CTNDAL.csproj", "{A3E8B0DE-8E0B-4035-B163-AB6B6DAB98BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityTelephoneNetwork.Logic", "CityTelephoneNetwork.Logic\CityTelephoneNetwork.Logic.csproj", "{A3E8B0DE-8E0B-4035-B163-AB6B6DAB98BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testDB", "testDB\testDB.csproj", "{08978A05-D3F0-4B24-85D3-D3A58A68FD92}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTNWPF", "CTNWPF\CTNWPF.csproj", "{16966302-E997-4F9A-BD90-68F3871A020E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityTelephoneNetwork.UI", "CityTelephoneNetwork.UI\CityTelephoneNetwork.UI.csproj", "{16966302-E997-4F9A-BD90-68F3871A020E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +23,6 @@ Global
 		{A3E8B0DE-8E0B-4035-B163-AB6B6DAB98BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3E8B0DE-8E0B-4035-B163-AB6B6DAB98BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3E8B0DE-8E0B-4035-B163-AB6B6DAB98BF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{08978A05-D3F0-4B24-85D3-D3A58A68FD92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{08978A05-D3F0-4B24-85D3-D3A58A68FD92}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{08978A05-D3F0-4B24-85D3-D3A58A68FD92}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{08978A05-D3F0-4B24-85D3-D3A58A68FD92}.Release|Any CPU.Build.0 = Release|Any CPU
 		{16966302-E997-4F9A-BD90-68F3871A020E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{16966302-E997-4F9A-BD90-68F3871A020E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16966302-E997-4F9A-BD90-68F3871A020E}.Release|Any CPU.ActiveCfg = Release|Any CPU

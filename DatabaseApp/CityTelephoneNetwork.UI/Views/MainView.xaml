@@ -1,0 +1,54 @@
+﻿<Window x:Class="CityTelephoneNetwork.UI.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:views="clr-namespace:CityTelephoneNetwork.UI.Views"
+        xmlns:lists="clr-namespace:CityTelephoneNetwork.UI.Views.Lists"
+        xmlns:views1="clr-namespace:CityTelephoneNetwork.UI.Views"
+        Title="MainView" Height="Auto" Width="Auto">
+    <Grid>
+        <TabControl HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" TabStripPlacement="Left">
+            <TabItem Header="Адреса">
+                <views:AddressListView DataContext="{Binding AddressList}"/>
+            </TabItem>
+            <TabItem Header="АТС">
+                <lists:ATSListView DataContext="{Binding ATSList}"/>
+            </TabItem>
+            <TabItem Header="Типы АТС">
+                <lists:ATSTypeListView DataContext="{Binding ATSTypeList}"/>
+            </TabItem>
+            <TabItem Header="Типы операций">
+                <lists:BalanceChangeTypeListView DataContext="{Binding BalanceChangeTypeList}"/>
+            </TabItem>
+            <TabItem Header="Баланс">
+                <lists:BalanceListView DataContext="{Binding BalanceList}"/>
+            </TabItem>
+            <TabItem Header="ГТС">
+                <lists:CTNListView DataContext="{Binding CTNList}"/>
+            </TabItem>
+            <TabItem Header="Звонки на межгород">
+                <lists:IntercityConversationListView DataContext="{Binding IntercityConversationList}"/>
+            </TabItem>
+            <TabItem Header="Статусы межгорода">
+                <lists:IntercityStatusListView DataContext="{Binding IntercityStatusList}"/>
+            </TabItem>
+            <TabItem Header="Типы телефонов">
+                <lists:PhoneTypeListView DataContext="{Binding PhoneTypeList}"/>
+            </TabItem>
+            <TabItem Header="Телефоны">
+                <lists:PhoneListView DataContext="{Binding PhoneList}"/>
+            </TabItem>
+            <TabItem Header="Типы очередей">
+                <lists:QueueTypeListView DataContext="{Binding QueueTypeList}"/>
+            </TabItem>
+            <TabItem Header="Очереди">
+                <lists:QueueListView DataContext="{Binding QueueList}"/>
+            </TabItem>
+            <TabItem Header="Типы абонентов">
+                <lists:SubscriberTypeListView DataContext="{Binding SubscriberTypeList}"/>
+            </TabItem>
+            <TabItem Header="Абоненты">
+                <lists:SubscriberListView DataContext="{Binding SubscriberList}"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
